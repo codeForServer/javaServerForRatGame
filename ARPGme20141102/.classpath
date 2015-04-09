@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="src" path="properties"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.7"/>
+	<classpathentry kind="lib" path="lib/netty-3.6.0.Final.jar"/>
+	<classpathentry kind="lib" path="lib/netty-3.6.0.Final-sources.jar"/>
+	<classpathentry kind="lib" path="lib/dom4j-1.6.1.jar"/>
+	<classpathentry kind="lib" path="lib/commons-io-2.0.1.jar"/>
+	<classpathentry kind="lib" path="lib/commons-pool-1.5.6.jar"/>
+	<classpathentry kind="lib" path="lib/jackson-all-1.8.0.jar"/>
+	<classpathentry kind="lib" path="lib/log4j-1.2.15.jar"/>
+	<classpathentry kind="lib" path="lib/mysql-connector-java-5.1.17-bin.jar"/>
+	<classpathentry kind="lib" path="lib/poi-3.8-beta3-20110606.jar"/>
+	<classpathentry kind="lib" path="lib/xmlbeans-2.3.0.jar"/>
+	<classpathentry kind="lib" path="lib/slf4j-simple-1.6.1.jar"/>
+	<classpathentry kind="lib" path="lib/slf4j-api-1.6.1.jar"/>
+	<classpathentry kind="lib" path="lib/poi-ooxml-schemas-3.8-beta3-20110606.jar"/>
+	<classpathentry kind="lib" path="lib/poi-ooxml-3.8-beta3-20110606.jar"/>
+	<classpathentry kind="lib" path="lib/commons-dbcp-1.4.jar"/>
+	<classpathentry kind="lib" path="lib/mybatis-3.2.2.jar"/>
+	<classpathentry kind="lib" path="lib/ehcache-core-2.0.1.jar"/>
+	<classpathentry kind="lib" path="lib/ehcache-terracotta-2.0.1.jar"/>
+	<classpathentry kind="lib" path="lib/commons-network.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

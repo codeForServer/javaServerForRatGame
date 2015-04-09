@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<model name="PLAYERMODEL" as_class="PlayerProxy" value="2001" desc="游戏服角色模块">
+  <command en_name="GC_HEART" cn_name="推送" value="100" direction="Server">
+    <param name="serverTime" type="long" size="8" remark="">当前时间</param>
+  </command>
+  <command en_name="CG_AUTH" cn_name="接收" value="101" direction="Client">
+    <param name="accountId" type="long" size="8" remark="">账号ID</param>
+    <param name="sessionKey" type="int" size="4" remark="">登陆服session</param>
+    <param name="key1" type="int" size="4" remark="">秘钥1</param>
+    <param name="key2" type="int" size="4" remark="">秘钥2</param>
+  </command>
+  <command en_name="GC_AUTH" cn_name="返回" value="102" direction="Server">
+    <param name="gameKey" type="int" size="4" remark="">游戏服密钥</param>
+  </command>
+  <command en_name="GC_PLAYERS" cn_name="推送" value="103" direction="Server">
+    <param name="choseRoles" type="listRole" size="2" remark="" text="角色列表">
+      <param name="playerId" type="long" size="8" remark="">角色ID</param>
+      <param name="playerName" type="String" size="20" remark="">角色名称</param>
+      <param name="country" type="byte" size="1" remark="">国家</param>
+      <param name="icon" type="byte" size="1" remark="">头像名称</param>
+      <param name="iconUrl" type="String" size="30" remark="">头像路径(预留)</param>
+      <param name="sex" type="byte" size="1" remark="">性别</param>
+    </param>
+  </command>
+  <command en_name="CG_CREATE" cn_name="接收" value="104" direction="Client">
+    <param name="playerName" type="String" size="20" remark="">角色名称</param>
+    <param name="country" type="byte" size="1" remark="">国家</param>
+    <param name="icon" type="byte" size="1" remark="">头像名称</param>
+    <param name="sex" type="byte" size="1" remark="">性别</param>
+  </command>
+  <command en_name="GC_CREATE" cn_name="返回" value="105" direction="Server">
+    <param name="playerId" type="long" size="8" remark="">角色ID</param>
+    <param name="playerName" type="String" size="20" remark="">角色名称</param>
+    <param name="country" type="byte" size="1" remark="">国家</param>
+    <param name="icon" type="byte" size="1" remark="">头像名称</param>
+    <param name="sex" type="byte" size="1" remark="">性别</param>
+  </command>
+  <command en_name="CG_DELETE" cn_name="接收" value="106" direction="Client">
+    <param name="playerId" type="long" size="8" remark="">角色ID</param>
+  </command>
+  <command en_name="GC_DELETE" cn_name="返回" value="107" direction="Server">
+    <param name="playerId" type="long" size="8" remark="">角色ID</param>
+  </command>
+  <command en_name="CG_LOGIN" cn_name="接收" value="108" direction="Client">
+    <param name="accountId" type="long" size="8" remark="">账号ID</param>
+    <param name="playerId" type="long" size="8" remark="">角色ID</param>
+  </command>
+  <command en_name="GC_LOGIN" cn_name="返回" value="109" direction="Server">
+    <param name="playerId" type="long" size="8" remark="">角色ID</param>
+    <param name="playerName" type="String" size="20" remark="">角色名称</param>
+    <param name="country" type="byte" size="1" remark="">国家</param>
+    <param name="sp" type="int" size="4" remark="">科技点</param>
+    <param name="silver" type="int" size="4" remark="">银币</param>
+    <param name="gold" type="int" size="4" remark="">金币</param>
+    <param name="gangId" type="int" size="4" remark="">帮派ID</param>
+    <param name="gangName" type="String" size="20" remark="">帮派名称</param>
+    <param name="server" type="int" size="4" remark="">服务器号</param>
+    <param name="basis" type="int" size="4" remark="">基础分</param>
+  </command>
+  <command en_name="GC_GS_DOWN" cn_name="推送" value="110" direction="Server">
+    <param name="downType" type="byte" size="1" remark="">下线类型</param>
+  </command>
+  <command en_name="GC_UPDATE_GOLD" cn_name="推送" value="111" direction="Server">
+    <param name="gold" type="int" size="4" remark="">金币值</param>
+    <param name="sourceType" type="short" size="2" remark="">来源类型</param>
+  </command>
+  <command en_name="GC_UPDATE_DIAMOND" cn_name="推送" value="112" direction="Server">
+    <param name="diamond" type="int" size="4" remark="">钻石值</param>
+    <param name="sourceType" type="short" size="2" remark="">来源类型</param>
+  </command>
+  <command en_name="GC_BASIS" cn_name="推送" value="113" direction="Server">
+    <param name="basis" type="int" size="4" remark="">基础分</param>
+  </command>
+</model>

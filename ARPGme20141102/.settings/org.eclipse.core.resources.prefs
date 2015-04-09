@@ -1,0 +1,11 @@
+eclipse.preferences.version=1
+encoding//src/com/arpg/gline=UTF-8
+encoding//src/com/arpg/gline/gameserver/controller/ControllerModel.java=UTF-8
+encoding//src/com/arpg/gline/gameserver/controller/NpcController.java=UTF-8
+encoding//src/com/arpg/gline/gameserver/controller/PlayerController.java=UTF-8
+encoding//src/netWork/proxy/BroadcastProxy.java=UTF-8
+encoding//src/netWork/proxy/ConquestProxy.java=UTF-8
+encoding//src/netWork/proxy/LoginProxy.java=UTF-8
+encoding//src/netWork/proxy/PlayerProxy.java=UTF-8
+encoding//src/netWork/proxy/SceneProxy.java=UTF-8
+encoding/<project>=UTF-8

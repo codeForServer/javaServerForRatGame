@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<model name="LGMODEL" as_class="LgProxy" value="2" desc="登陆服游戏服通信模块">
+  <command en_name="CG_HEART" cn_name="接收" value="100" direction="Client">
+    <param name="result" type="short" size="2" remark="">结果</param>
+    <param name="time" type="long" size="8" remark="">当前时间</param>
+  </command>
+  <command en_name="CG_GS_AUTH" cn_name="接收" value="101" direction="Client">
+    <param name="result" type="short" size="2" remark="">结果</param>
+    <param name="serverId" type="int" size="4" remark="">服务器ID</param>
+    <param name="password" type="String" size="20" remark="">密码</param>
+  </command>
+  <command en_name="CG_GS_VALIDATE" cn_name="接收" value="102" direction="Client">
+    <param name="result" type="short" size="2" remark="">结果</param>
+    <param name="accountId" type="long" size="8" remark="">账号ID</param>
+    <param name="sessionKey" type="int" size="4" remark="">登陆服session</param>
+    <param name="key1" type="int" size="4" remark="">秘钥1</param>
+    <param name="key2" type="int" size="4" remark="">秘钥2</param>
+  </command>
+  <command en_name="CG_GS_DOWN" cn_name="接收" value="103" direction="Client">
+    <param name="result" type="short" size="2" remark="">结果</param>
+    <param name="accountId" type="long" size="8" remark="">账号ID</param>
+    <param name="downType" type="byte" size="1" remark="">下线类型</param>
+  </command>
+  <command en_name="GC_GS_AUTH" cn_name="返回" value="104" direction="Server"/>
+  <command en_name="GC_GS_KICK" cn_name="推送" value="105" direction="Server">
+    <param name="accountId" type="long" size="8" remark="">账号ID</param>
+    <param name="downType" type="byte" size="1" remark="">下线类型</param>
+  </command>
+  <command en_name="GC_GS_VALIDATE" cn_name="推送" value="106" direction="Server">
+    <param name="accountId" type="long" size="8" remark="">账号ID</param>
+    <param name="wallow" type="int" size="4" remark="">防沉迷状态</param>
+    <param name="wallowTime" type="long" size="8" remark="">防沉迷时间</param>
+    <param name="lastDownTime" type="long" size="8" remark="">走后下线时间</param>
+  </command>
+</model>

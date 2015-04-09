@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--namespace必须指向DAO接口 -->
+<mapper namespace="com.arpg.gline.gameserver.dao.Interface.GamePlayerDao">
+	<!-- 查询 -->
+	<select id="get" parameterType="int" resultType="GamePlayer">
+		select *
+		from
+		GamePlayer where countId=#{countId}
+	</select>
+</mapper> 

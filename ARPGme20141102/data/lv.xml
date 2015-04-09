@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<levels>
+	<level lv="1" lv_exp="100">
+		<npc  xp="999" />
+	</level>
+	<level lv="2" lv_exp="200">
+			<npc  xp="888" />
+	</level>
+	<level lv="3" lv_exp="300">
+			<npc  xp="777" />
+	</level>
+</levels>

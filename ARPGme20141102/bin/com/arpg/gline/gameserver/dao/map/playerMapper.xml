@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--namespace必须指向DAO接口 -->
+<mapper namespace="com.arpg.gline.gameserver.dao.Interface.PlayerDao">
+
+	
+	<!--实体映射-->
+	<resultMap type="PlayerEntity" id="ResultMap">
+	<id property="id" column="id"/>
+	<result property="roleId" column="roleId"/>
+	<result property="name" column="name"/>
+	<result property="sex" column="sex"/>
+	<result property="profession" column="profession"/>
+	</resultMap>
+	
+		<!-- 查询 -->
+	<select id="get" parameterType="int" resultType="PlayerEntity">
+		select *
+		from
+		roleentity where player_count=#{player_count}
+	</select>
+	
+	<!-- 查询 -->
+	<save id="getByName" parameterType="string" resultType="PlayerEntity">
+		select *
+		from
+		roleentity where name=#{name}
+	</select>
+	
+	
+	<!-- 查询学生列表 -->  
+    <select id="getStudentAll"  resultType="com.manager.data.model.StudentEntity" resultMap="studentResultMap">  
+        <![CDATA[ 
+            SELECT * from STUDENT_TBL 
+        ]]>   
+    </select>
+	
+	
+	<!-- map查询 -->
+	<select id="search" parameterType="Map" resultType="PlayerEntity">  
+    select * from roleentity where countId=#{countId} and password=#{password}  
+	</select> 
+	
+	<!-- 查询 -->
+	<select id="getByName" parameterType="string" resultType="PlayerEntity">
+		select *
+		from
+		roleentity where name=#{name}
+	</select>
+	
+	 
+</mapper> 
